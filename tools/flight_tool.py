@@ -562,18 +562,3 @@ if __name__ == "__main__":
 
 
 
-
-
-
-
-
-
-
-# def search_flights(query: str, limit: int = 0):
-#   if not AVIATIONSTACK_API_KEY:
-#     return (
-#       "Flight API error: AVIATIONSTACK_API_KEY is missing.\n"
-#       "Please add this in your .env file: \n"
-#     )
-
-#   dep_iata, arr_iata = parse 
