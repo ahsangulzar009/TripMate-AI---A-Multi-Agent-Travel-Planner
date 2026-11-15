@@ -36,7 +36,7 @@ class TravelState(TypedDict):
   llm_calls: int
 
 def flight_agent(state: TravelState):
-  query = state["user_query"]
+  query = state['user_query']
   flight_data = search_flights(query)
 
   return {
@@ -46,7 +46,7 @@ def flight_agent(state: TravelState):
   }
 
 def hotel_agent(state: TravelState):
-  query = f"Best hotels for {state["user_query"]}"
+  query = f"Best hotels for {state['user_query']}"
   hotel_results = tavily_search(query)
 
   return {
@@ -67,7 +67,7 @@ def itinerary_agent(state: TravelState):
   """
   response = llm.invoke([
       SystemMessage(content="You are an expert Travel planner."),
-      HumanMessage(conetent=prompt)
+      HumanMessage(content=prompt)
   ])
 
   return {
